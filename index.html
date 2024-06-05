@@ -1,0 +1,493 @@
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-200" >
+<!-- namvbar -->
+<header class="bg-gray-100 dark:bg-gray-900 king">
+    <nav class="fixed top-0 left-0 right-0 z-10 bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./img/35322171_8_1sasa11.svg" class="h-8" alt="Flowbite Logo">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">GoldenWave</span>
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="w-8 h-8 rounded-full" src="./img/avator.png" alt="user photo">
+                </button>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute top-14 right-0" id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <!-- <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span> -->
+                    </div>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign in</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign up</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+                        </li>
+                    </ul>
+                </div>
+                <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Benefits</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Toggler for mobile menu
+    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-user"]');
+    const navbarMenu = document.getElementById('navbar-user');
+    toggleButton.addEventListener('click', function () {
+        navbarMenu.classList.toggle('hidden');
+        navbarMenu.classList.toggle('flex');
+    });
+
+    // User menu dropdown
+    const userMenuButton = document.getElementById('user-menu-button');
+    const userDropdown = document.getElementById('user-dropdown');
+    userMenuButton.addEventListener('click', function () {
+        userDropdown.classList.toggle('hidden');
+    });
+});
+</script>
+
+
+ <!-- navigation end -->
+<!-- body -->
+<!-- <div class="hero min-h-screen bg-base-200">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+      <img src="pexels-anush-1431282-removebg-preview.png" class="w-full lg:max-w-md rounded-lg shadow-2xl" />
+      <div class="lg:pl-8">
+          <h1 class="pt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight whitespace-nowrap">
+              <span class="whitespace-nowrap text-green">WHERE HEALTH,<br> BEAUTY,<br> AND FITNESS MEET.</span>
+          </h1>
+          <h1 class="text-5xl font-bold">Box Office News!</h1>
+          <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+          <button class="btn btn-primary">Get Started</button>
+      </div>
+  </div>
+</div> -->
+
+<div class="hero  bg-gray-200">
+  <div class="hero-content flex-col lg:flex-row-reverse">
+    <img src="./img/pexels-anush-1431282-removebg-preview.png" class="h-full rounded-lg " />
+    <div>
+      <h1
+    class="pt-4 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tighter leading-tight whitespace-nowrap">    <span class="whitespace-nowrap text-green">WHERE HEALTH,<br> BEAUTY,<br>AND FITNESS MEET</span> 
+  </h1>
+      
+      <p class="py-6">Provident cupiditate voluptatem et in. <br> Quaerat fugiat ut assumenda excepturi exercitationem quasi. <br> In deleniti eaque aut repudiandae et a id nisi.</p>
+      <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded ">Join Us</button>
+    </div>
+  </div>
+</div>
+<!-- second body -->
+<!-- <div class="hero min-h-screen" style="background-image: url(pexels-panther-1547248.jpg);">
+  <div class="hero "></div>
+  <div class="hero text-start text-neutral-content">
+    <div class="">
+      <h1 class="mb-5 text-5xl font-bold">Hello there</h1>
+      <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      <button class="btn btn-primary">Get Started</button>
+    </div>
+  </div>
+</div> -->
+
+<!-- card -->
+<div class="flex justify-center px-4 ">
+  <div class="text-center">
+    <h1 class="text-md sm:text-xl lg:text-2xl font-semibold"></h1>
+    <h1 class="pt-4 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight">
+      <span class="block sm:inline">WHY CHOOSE US?</span><span class="hidden sm:inline lg:hidden"><br></span> <span class="block sm:inline lg:inline"></span>
+    </h1>
+  </div>
+</div>
+
+
+
+<div class="bg-gray-200 w-full py-12 gap-4 flex-wrap flex justify-center items-center">
+
+  <!-- Card -->
+  <div class="w-80 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+    <!-- Image -->
+    <img class="h-72 object-cover rounded-xl" h-40 object-cover rounded-xl" src="./img/2148201101.jpg" alt="">
+    <div class="p-2">
+    <!-- Heading -->
+    <h2 class="font-bold text-lg mb-2 ">WORK YOUR BUTT OFF</h2>
+    <!-- Description -->
+    <p class="text-sm text-gray-600">For those of you who are serious about having more.</p>
+    </div>
+    <!-- CTA -->
+    <div class="m-2">
+    <!-- <a role='button' href='#' class="text-white bg-purple-600 px-3 py-1 rounded-md hover:bg-purple-700">Learn More</a> -->
+    </div>
+  </div>
+    <!-- Card -->
+    <div class="w-80 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+      <!-- Image -->
+      <img class="h-72 object-cover rounded-xl" h-40 object-cover rounded-xl" src="./img/portrait-motivated-strong-shirtless-male-bodybuilder.jpg"">
+      <div class="p-2">
+      <!-- Heading -->
+      <h2 class="font-bold text-lg mb-2 ">GET FIT DONOT QUIT</h2>
+      <!-- Description -->
+      <p class="text-sm text-gray-600">Success isnot really that difficult. There is a significant?</p>
+      </div>
+      <!-- CTA -->
+      <div class="m-2">
+      <!-- <a role='button' href='#' class="text-white bg-purple-600 px-3 py-1 rounded-md hover:bg-purple-700">Learn More</a> -->
+      </div>
+    </div>  <!-- Card -->
+    <div class="w-80 p-2 bg-white rounded-xl transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
+      <!-- Image -->
+      <img class="h-72 object-cover rounded-xl" h-40 object-cover rounded-xl" src="./img/bodybuilding-concept-with-man-gym-lifting-barbell.jpg" alt="">
+      <div class="p-2">
+      <!-- Heading -->
+      <h2 class="font-bold text-lg mb-2 ">GET IN THE GROOVE</h2>
+      <!-- Description -->
+      <p class="text-sm text-gray-600">Use a past defeat as a motivator. Remind yourself you have.</p>
+      </div>
+      <!-- CTA -->
+      <div class="m-2">
+      <!-- <a role='button' href='#' class="text-white bg-purple-600 px-3 py-1 rounded-md hover:bg-purple-700">Learn More</a> -->
+      </div>
+    </div>
+    
+  
+  
+
+</div>
+
+
+<!-- Feature Cards -->
+<div id="features" class="flex justify-center  ">
+    <div class="text-center">
+        <h1 class="pt-4 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tighter leading-tight">
+            <span class="block sm:inline">OUR KEY FEATURES</span><span class="hidden sm:inline lg:hidden"><br></span> <span class="block sm:inline">AND BENEFITS</span>
+        </h1>
+        <div class="grid mx-5 gap-10 md:gap-8 md:grid-cols-2 lg:grid-cols-3 pt-8 lg:pt-16">
+            <div class="rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+                <div class="text-4xl">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3 class="text-xl font-semibold pt-5 pb-2">State-of-the-Art Equipment</h3>
+                <p>Our gym features the latest fitness equipment to help you achieve your goals.</p>
+            </div>
+            <div class="rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+                <div class="text-4xl">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-xl font-semibold pt-5 pb-2">Expert Trainers</h3>
+                <p>Our trainers are certified professionals who will guide and support you.</p>
+            </div>
+            <div class="rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+                <div class="text-4xl">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3 class="text-xl font-semibold pt-5 pb-2">Relaxing Spa</h3>
+                <p>Unwind and rejuvenate with our premium spa services.</p>
+            </div>
+            <div class="rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+                <div class="text-4xl">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="text-xl font-semibold pt-5 pb-2">Health & Wellness</h3>
+                <p>Comprehensive health and wellness programs tailored to your needs.</p>
+            </div>
+            <div class="rounded-lg shadow-lg p-6 bg-white dark:bg-gray-800">
+                <div class="text-4xl">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold pt-5 pb-2">Nutritional Guidance</h3>
+                <p>Get personalized nutrition plans to complement your fitness regime.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pricing Section -->
+<div id="pricing" class=" py-12">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Our Pricing Plans</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Basic Plan</h3>
+                <p class="text-xl font-semibold mb-4">$29/month</p>
+                <ul class="text-left mb-6">
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Access to gym equipment</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> One personal training session</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Free parking</li>
+                </ul>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Up</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Standard Plan</h3>
+                <p class="text-xl font-semibold mb-4">$49/month</p>
+                <ul class="text-left mb-6">
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Access to gym equipment</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Three personal training sessions</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Free parking</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Access to spa</li>
+                </ul>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Up</button>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">Premium Plan</h3>
+                <p class="text-xl font-semibold mb-4">$79/month</p>
+                <ul class="text-left mb-6">
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Access to gym equipment</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Unlimited personal training</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Free parking</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Access to spa</li>
+                    <li class="mb-2"><i class="fas fa-check text-green-500"></i> Nutrition guidance</li>
+                </ul>
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Sign Up</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<!-- <div id="contact" class=" container m-auto  py-12">
+    <div class="h-full/2 mt-5 mx-auto px-4 sm:px-8 lg:px-16 text-center border rounded-lg shadow-lg">
+        <h2 class="text-3xl font-bold mb-6 border">Get in Touch</h2>
+        <form class="max-w-screen-md mt-9 mx-auto mb-20 border">
+            <div class="mb-4">
+                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Name" required>
+            </div>
+            <div class="mb-4">
+                <input type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Email" required>
+            </div>
+            <div class="mb-4">
+                <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn bg-gray-800 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg">Send Message</button>
+        </form>
+    </div>
+</div> -->
+
+    <!-- Call to Action -->
+    <!-- <section class="py-12 bg-blue-600">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold text-white">Ready to Get Started?</h2>
+            <p class="mt-4 text-lg text-blue-200">Sign up now and take your data to the next level.</p>
+            <a href="#" class="mt-8 inline-block bg-white text-blue-600 py-3 px-8 rounded-md text-lg font-medium">Sign Up Now</a>
+        </div>
+    </section> -->
+<!-- review -->
+
+<section id="testimonials" class="flex flex-col items-center w-full py-10">
+    <!--heading--->
+    <div class="testimonial-heading text-center mb-10">
+        <!-- <span class="text-lg text-gray-600 uppercase tracking-widest">Comments</span> -->
+        <h1 class="text-2xl md:text-3xl font-semibold bg-gray-200 text-black  px-6 py-2 mt-2">User Testimonials</h1>
+    </div>
+    <!--testimonials-box-container------>
+    <div class="testimonial-box-container flex flex-wrap justify-center w-full">
+        <!--BOX-1-------------->
+        <div class="testimonial-box w-full md:w-5/12 lg:w-1/3 bg-white p-6 m-4 shadow-lg transition-transform transform hover:-translate-y-2">
+            <!--top------------------------->
+            <div class="box-top flex justify-between items-center mb-4">
+                <!--profile----->
+                <div class="profile flex items-center">
+                    <!--img---->
+                    <div class="profile-img w-12 h-12 rounded-full overflow-hidden mr-4">
+                        <img src="./img/FB_IMG_1692428842712 (1).jpg" alt="Profile Image" class="object-cover object-center w-full h-full">
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user flex flex-col">
+                        <strong class="text-gray-800">Md Ismayel Shekh</strong>
+                        <span class="text-gray-500 text-sm">CEO</span>
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p class="text-gray-600 text-sm"> "GoldenWave has been a game-changer for me. The state-of-the-art equipment and expert trainers helped me achieve my fitness goals faster than I ever thought possible. Highly recommended!"</p>
+            </div>
+        </div>
+        <!--BOX-2-------------->
+        <div class="testimonial-box w-full md:w-5/12 lg:w-1/3 bg-white p-6 m-4 shadow-lg transition-transform transform hover:-translate-y-2">
+            <!--top------------------------->
+            <div class="box-top flex justify-between items-center mb-4">
+                <!--profile----->
+                <div class="profile flex items-center">
+                    <!--img---->
+                    <div class="profile-img w-12 h-12 rounded-full overflow-hidden mr-4">
+                        <img src="./img/download.jpeg" alt="Profile Image" class="object-cover object-center w-full h-full">
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user flex flex-col">
+                        <strong class="text-gray-800">MD Sakil</strong>
+                        <span class="text-gray-500 text-sm">Senior Software Engineer</span>
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p class="text-gray-600 text-sm">"As a busy professional, finding time for fitness was always a challenge. But GoldenWave's convenient location and flexible scheduling options made it easy for me to stay on track with my workouts. Plus, the friendly staff always make me feel welcome."
+                </p>
+            </div>
+        </div>
+        <!--BOX-3-------------->
+        <div class="testimonial-box w-full md:w-5/12 lg:w-1/3 bg-white p-6 m-4 shadow-lg transition-transform transform hover:-translate-y-2">
+            <!--top------------------------->
+            <div class="box-top flex justify-between items-center mb-4">
+                <!--profile----->
+                <div class="profile flex items-center">
+                    <!--img---->
+                    <div class="profile-img w-12 h-12 rounded-full overflow-hidden mr-4">
+                        <img src="./img/download (1).jpeg" alt="Profile Image" class="object-cover object-center w-full h-full">
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user flex flex-col">
+                        <strong class="text-gray-800">Tahan Shekh</strong>
+                        <span class="text-gray-500 text-sm">Software Engineer</span>
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p class="text-gray-600 text-sm">"I've tried many gyms in the past, but GoldenWave stands out for its personalized approach to fitness. From tailored workout plans to nutritional guidance, they truly care about helping you succeed."</p>
+            </div>
+        </div>
+        <!--BOX-4-------------->
+        <div class="testimonial-box w-full md:w-5/12 lg:w-1/3 bg-white p-6 m-4 shadow-lg transition-transform transform hover:-translate-y-2">
+            <!--top------------------------->
+            <div class="box-top flex justify-between items-center mb-4">
+                <!--profile----->
+                <div class="profile flex items-center">
+                    <!--img---->
+                    <div class="profile-img w-12 h-12 rounded-full overflow-hidden mr-4">
+                        <img src="./img/download (2).jpeg" alt="Profile Image" class="object-cover object-center w-full h-full">
+                    </div>
+                    <!--name-and-username-->
+                    <div class="name-user flex flex-col">
+                        <strong class="text-gray-800">Rahat Shekh</strong>
+                        <span class="text-gray-500 text-sm">Tainer</span>
+                    </div>
+                </div>
+                <!--reviews------>
+                <div class="reviews text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i><!--Empty star-->
+                </div>
+            </div>
+            <!--Comments---------------------------------------->
+            <div class="client-comment">
+                <p class="text-gray-600 text-sm">"Joining GoldenWave was the best decision I've made for my health. The relaxing spa services are the perfect way to unwind after a tough workout, and the supportive community keeps me motivated. I couldn't be happier with my experience here."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+<!-- footer -->
+<style>
+  .xl-3d4c6f {
+    background-color: #3d4c6f;
+  }
+</style>
+<footer class="xl-3d4c6f my-3">
+    <div class="container mx-auto py-10 px-6">
+        <div class="flex flex-col items-center">
+            <div class="flex flex-wrap justify-center space-x-4 mb-8">
+                <a href="#" class="text-blue-700  bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#" class="text-yellow-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="#" class="text-blue-900 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="text-green-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-google-plus fa-2x"></i>
+                </a>
+                <a href="#" class="text-red-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="text-center  py-4">
+            <p class="text-white  w-full">&copy; 2024; Copyright by <span class="font-semibold">GoldenWave</span></p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
