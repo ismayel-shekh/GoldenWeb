@@ -1,0 +1,238 @@
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-300">
+    <!-- namvbar -->
+    <header class="bg-gray-100 dark:bg-gray-900 king">
+        <nav class="fixed top-0 left-0 right-0 z-10 bg-white border-gray-200 dark:bg-white">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="./img/35322171_8_1sasa11.svg" class="h-8" alt="Flowbite Logo">
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">GoldenWave</span>
+                </a>
+                <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <button type="button"
+                        class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                        id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
+                        data-dropdown-placement="bottom">
+                        <span class="sr-only">Open user menu</span>
+                        <img class="w-8 h-8 rounded-full" src="./img/avator.png" alt="user photo">
+                    </button>
+                    <!-- Dropdown menu -->
+                    <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute top-14 right-0"
+                        id="user-dropdown">
+                        <div class="px-4 py-3">
+                            <!-- <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span> -->
+                        </div>
+                        <ul class="py-2" aria-labelledby="user-menu-button">
+                            <li>
+                                <a href="profile.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="deposit.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Add Money</a>
+                            </li>
+                            <li>
+                                <a href="login.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                                    in</a>
+                            </li>
+                            <li>
+                                <a href="register.html"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
+                                    up</a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" onclick="handlelogOut()">Sign
+                                    out</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <button data-collapse-toggle="navbar-user" type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-user" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                    <ul
+                        class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                        <li>
+                            <a href="index.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="shop.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Shop</a>
+                        </li>
+                        <li>
+                            <a href="pricing.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Plans</a>
+                        </li>
+                        <li>
+                            <a href="about_us.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                            About Us</a>
+                        </li>
+                        <li>
+                            <a href="Contact_us.html"
+                                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact
+                                Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Toggler for mobile menu
+            const toggleButton = document.querySelector('[data-collapse-toggle="navbar-user"]');
+            const navbarMenu = document.getElementById('navbar-user');
+            toggleButton.addEventListener('click', function () {
+                navbarMenu.classList.toggle('hidden');
+                navbarMenu.classList.toggle('flex');
+            });
+
+            // User menu dropdown
+            const userMenuButton = document.getElementById('user-menu-button');
+            const userDropdown = document.getElementById('user-dropdown');
+            userMenuButton.addEventListener('click', function () {
+                userDropdown.classList.toggle('hidden');
+            });
+        });
+    </script>
+    <!-- login form -->
+    <section class="bg-gray-100 min-h-screen flex box-border justify-center items-center">
+        <div class="bg-gray-300 rounded-2xl flex max-w-3xl p-5 items-center">
+            <div class="md:w-1/2 px-8">
+                <h2 class="font-bold text-3xl text-[#002D74]">Login</h2>
+                <p class="text-sm mt-4 text-[#002D74]">If you already a member, easily log in now.</p>
+    
+                <form action="" class="flex flex-col gap-4">
+                    <input id="login-username" class="p-2 mt-8 rounded-xl border" type="email" name="email" placeholder="Email">
+                    <div class="relative">
+                        <input id="login-password" class="p-2 rounded-xl border w-full" type="password" name="password" id="password" placeholder="Password">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray" id="togglePassword"
+                            class="bi bi-eye absolute top-1/2 right-3 -translate-y-1/2 cursor-pointer z-20 opacity-100"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z">
+                            </path>
+                            <path
+                                d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z">
+                            </path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-eye-slash-fill absolute top-1/2 right-3 -z-1 -translate-y-1/2 cursor-pointer hidden"
+                            id="mama" viewBox="0 0 16 16">
+                            <path
+                                d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z">
+                            </path>
+                            <path
+                                d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z">
+                            </path>
+                        </svg>
+                    </div>
+                    <button class="btn btn-primary text-white py-2 rounded-xl hover:scale-105 duration-300 hover:bg-[#206ab1] font-medium" type="submit" onclick="handleLogin(event)">Login</button>
+                </form>
+                <div class="mt-10 text-sm border-b border-gray-500 py-5 playfair tooltip">Forget password?</div>
+    
+                <div class="mt-4 text-sm flex justify-between items-center container-mr">
+                    <p class="mr-3 md:mr-0 ">If you don't have an account..</p>
+                    <button class="hover:border register text-white btn btn-primary hover:border-gray-400 rounded-xl py-2 px-5 hover:scale-110 hover:bg-[#002c7424] font-semibold duration-300" onclick="location.href='register.html'">Register</button>
+                </div>
+            </div>
+            <div class="md:block hidden w-1/2">
+                <img class="rounded-2xl max-h-[1600px]" src="img/alora-griffiths-JNeYWQncbj8-unsplash.jpg" alt="login form image">
+            </div>
+        </div>
+    </section>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+    <!-- footer -->
+    <style>
+        .xl-3d4c6f {
+            background-color: #3d4c6f;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .xl-3d4c6f {
+                margin-top: 0px;
+
+            }
+        }
+    </style>
+    <footer class="xl-3d4c6f ">
+        <div class="container mx-auto py-10 px-6">
+            <div class="flex flex-col items-center">
+                <div class="flex flex-wrap justify-center space-x-4 mb-8">
+                    <a href="#"
+                        class="text-blue-700  bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="#"
+                        class="text-yellow-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="#"
+                        class="text-blue-900 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    <a href="#"
+                        class="text-green-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                        <i class="fab fa-google-plus fa-2x"></i>
+                    </a>
+                    <a href="#"
+                        class="text-red-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="flex gap-3 justify-center flex-col items-center md:flex-row md:space-x-8 mb-8 ">
+                <a href="index.html" class="text-white hover:text-black transition duration-500">Home</a>
+                <a href="about_us.html" class="text-white hover:text-black transition duration-500">About Us</a>
+                <a href="#" class="text-white hover:text-black transition duration-500">Benefits</a>
+                <a href="#" class="text-white hover:text-black transition duration-500">Pricing</a>
+                <a href="Contact_us.html" class="text-white hover:text-black transition duration-500">Contact Us</a>
+            </div>
+            <div class="text-center  py-4">
+                <p class="text-white  w-full">&copy; 2024; Copyright by <span class="font-semibold">GoldenWave</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js file/logout.js"></script>
+
+    <script src="./js file/login.js"></script>
+
+</body>
+
+</html>

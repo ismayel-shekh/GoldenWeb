@@ -1,0 +1,184 @@
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about_us</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="" >
+<!-- namvbar -->
+<header class="bg-gray-100 dark:bg-gray-900 king">
+    <nav class="fixed top-0 left-0 right-0 z-10 bg-white border-gray-200 dark:bg-white">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./img/35322171_8_1sasa11.svg" class="h-8" alt="Flowbite Logo">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">GoldenWave</span>
+            </a>
+            <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
+                    <span class="sr-only">Open user menu</span>
+                    <img class="w-8 h-8 rounded-full" src="./img/avator.png" alt="user photo">
+                </button>
+                <!-- Dropdown menu -->
+                <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600 absolute top-14 right-0" id="user-dropdown">
+                    <div class="px-4 py-3">
+                        <!-- <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
+                        <span class="block text-sm text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span> -->
+                    </div>
+                    <ul class="py-2" aria-labelledby="user-menu-button">
+                        <li>
+                            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="deposit.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Add Money</a>
+                        </li>
+                        <li>
+                            <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign in</a>
+                        </li>
+                        <li>
+                            <a href="register.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign up</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" onclick="handlelogOut()">Sign out</a>
+                        </li>
+                    </ul>
+                </div>
+                <button data-collapse-toggle="navbar-user" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-user" aria-expanded="false">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-user">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
+                    <li>
+                        <a href="index.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Shop</a>
+                    </li>
+                    <li>
+                        <a href="pricing.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Plans</a>
+                    </li>
+                    <li>
+                        <a href="about_us.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">About Us</a>
+                    </li>
+                    <li>
+                        <a href="Contact_us.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Toggler for mobile menu
+    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-user"]');
+    const navbarMenu = document.getElementById('navbar-user');
+    toggleButton.addEventListener('click', function () {
+        navbarMenu.classList.toggle('hidden');
+        navbarMenu.classList.toggle('flex');
+    });
+
+    // User menu dropdown
+    const userMenuButton = document.getElementById('user-menu-button');
+    const userDropdown = document.getElementById('user-dropdown');
+    userMenuButton.addEventListener('click', function () {
+        userDropdown.classList.toggle('hidden');
+    });
+});
+</script>
+<!-- about us  -->
+<section class="pt-10 overflow-hidden bg-gray-50 dark:bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16">
+    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
+        <div class="grid items-center grid-cols-1 md:grid-cols-2">
+
+            <div>
+                <h2 class="text-3xl font-bold leading-tight text-black dark:text-black sm:text-4xl lg:text-5xl">Hey 👋 I
+                    am
+                    <br class="block sm:hidden" />Ismayel Shekh
+                </h2>
+                <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-black md:mt-8">
+                    Amet minim mollit non deserunt
+                    ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
+                    Exercitation veniam consequat sunt nostrud amet.
+                </p>
+
+                <p class="mt-4 text-xl text-gray-600 dark:text-gray-600 md:mt-8">
+                    <span class="relative inline-block">
+                        <span class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300 dark:bg-yellow-300"></span>
+                    <span class="relative"> Have a question? </span>
+                    </span>
+                    <br class="block sm:hidden" />Ask me on <a href="https://x.com/?lang=en" title=""
+                        class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline">Twitter</a>
+                </p>
+            </div>
+
+            <div class="relative">
+                <img class="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg" alt="" />
+
+                <img class="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="img/ismayel1.png" alt="picture" />
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+
+<!-- footer -->
+<style>
+  .xl-3d4c6f {
+    background-color: #3d4c6f;
+  }
+</style>
+<footer class="xl-3d4c6f my-3">
+    <div class="container mx-auto py-10 px-6">
+        <div class="flex flex-col items-center">
+            <div class="flex flex-wrap justify-center space-x-4 mb-8">
+                <a href="#" class="text-blue-700  bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-facebook fa-2x"></i>
+                </a>
+                <a href="#" class="text-yellow-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="#" class="text-blue-900 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="text-green-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-google-plus fa-2x"></i>
+                </a>
+                <a href="#" class="text-red-600 bg-white hover:bg-indigo-700 p-3 m-2 rounded-full transition duration-500">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
+            </div>
+        </div>
+        <div class="flex gap-3 justify-center flex-col items-center md:flex-row md:space-x-8 mb-8 ">
+            <a href="index.html" class="text-white hover:text-black transition duration-500">Home</a>
+            <a href="about_us.html" class="text-white hover:text-black transition duration-500">About Us</a>
+            <a href="#" class="text-white hover:text-black transition duration-500">Benefits</a>
+            <a href="#" class="text-white hover:text-black transition duration-500">Pricing</a>
+            <a href="Contact_us.html" class="text-white hover:text-black transition duration-500">Contact Us</a>
+        </div>
+        <div class="text-center  py-4">
+            <p class="text-white  w-full">&copy; 2024; Copyright by <span class="font-semibold">GoldenWave</span></p>
+        </div>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./js file/logout.js"></script>
+
+</body>
+</html>
