@@ -7,7 +7,7 @@ const loadUserDetails = () => {
             console.log(data)
             const parent = document.getElementById("nagin-profile");
             const div = document.createElement("div");
-            div.innerHTML =`
+            div.innerHTML = `
                             <h1 class="lg:text-3xl md:text-2xl sm:text-xl xs:text-xl font-serif font-extrabold mb-2 dark:text-white text-center">
                     Profile
                 </h1>
@@ -91,15 +91,73 @@ const updataprofile = (event) => {
         method: 'PUT',
         body: formData,
     })
-    .then((response) => response.json())
-    .then((data) => {
-        console.log('Success:', data);
-        alert('Profile updated successfully');
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        alert('An error occurred while updating the profile');
-    });
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('Success:', data);
+            alert('Profile updated successfully');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred while updating the profile');
+        });
 };
 
 document.getElementById('nagin-profile').addEventListener('submit', updataprofile);
+
+
+
+const showplans = () => {
+    const user_id = localStorage.getItem("user_id");
+    console.log(user_id);
+
+    fetch(`https://goldenweve-drf.onrender.com/plan/buy/?user_id=${user_id}`)
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+
+            const seenPlans = new Set(); // Initialize a Set to track seen plans
+
+            data?.forEach((datax) => {
+                if (!seenPlans.has(datax.Plan)) { // Check if the Plan has not been seen before
+                    seenPlans.add(datax.Plan); // Add the Plan to the Set
+
+                    fetch(`https://goldenweve-drf.onrender.com/plan/add/${datax.Plan}`)
+                        .then((res) => res.json())
+                        .then((dataa) => {
+                            console.log(dataa);
+                            console.log(data)
+                            const parent = document.getElementById("myallplans");
+                            const div = document.createElement("div");
+                            div.innerHTML = `
+                            <a href="pricing.html"
+        class="flex flex-col p-6 space-y-6 transition-all duration-500 bg-white border border-indigo-100 rounded-lg shadow hover:shadow-xl lg:p-8 lg:flex-row lg:space-y-0 lg:space-x-6">
+        <div
+            class="flex items-center justify-center w-16 h-16 bg-green-100 border border-green-200 rounded-full shadow-inner lg:h-20 lg:w-20">
+            <svg class="w-10 h-10 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z">
+                </path>
+            </svg>
+        </div>
+        <div class="flex-1">
+            <h5 class="mb-3 text-xl font-bold lg:text-2xl">${dataa.type} Plans</h5>
+            <p class="mb-6 text-lg text-gray-600">Price: ${dataa.cost}$</p>
+            <span class="flex items-baseline text-lg font-bold text-indigo-600">
+              View  comparison
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </span>
+        </div>
+    </a>
+                            `;
+                            parent.appendChild(div);
+
+                        })
+                        .catch((error) => console.error('Error:', error));
+                }
+            });
+        })
+        .catch((error) => console.error('Error:', error));
+};
+
+showplans();
