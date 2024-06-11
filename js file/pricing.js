@@ -1,5 +1,5 @@
 const showPlans = () => {
-    fetch(`http://127.0.0.1:8000/plan/add/`)
+    fetch(`https://goldenweve-drf.onrender.com/plan/add/`)
     .then(res => res.json())
     .then(data => {
         console.log(data);

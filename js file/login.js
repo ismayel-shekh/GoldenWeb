@@ -4,7 +4,7 @@ const handleLogin = (event) => {
   const password = document.getElementById("login-password").value;
 
   if (email && password) {
-      fetch("http://127.0.0.1:8000/user/login/", {
+      fetch("https://goldenweve-drf.onrender.com/user/login/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email, password }),
