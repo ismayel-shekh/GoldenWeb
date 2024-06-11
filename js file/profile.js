@@ -1,7 +1,7 @@
 const loadUserDetails = () => {
     const user_id = localStorage.getItem("user_id");
     console.log(user_id);
-    fetch(`http://127.0.0.1:8000/user/list/${user_id}`)
+    fetch(`https://goldenweve-drf.onrender.com/user/list/${user_id}`)
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
@@ -87,7 +87,7 @@ const updataprofile = (event) => {
         formData.append('image', profile_image);
     }
 
-    fetch(`http://127.0.0.1:8000/user/list/${user_id}/`, {
+    fetch(`https://goldenweve-drf.onrender.com/user/list/${user_id}/`, {
         method: 'PUT',
         body: formData,
     })

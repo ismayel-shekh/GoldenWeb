@@ -26,7 +26,7 @@ const handleRegistration = (event) => {
         /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)
       ) {
         console.log(info);
-          fetch("http://127.0.0.1:8000/user/register/", {
+          fetch("https://goldenweve-drf.onrender.com/user/register/", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(info),

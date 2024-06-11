@@ -11,9 +11,12 @@ const handleLogin = (event) => {
       })
       .then((res) => res.json())
       .then((data) => {
-          if (data.user_id) {
+        
+          if (data.token && data.user_id) {
+            localStorage.setItem("token", data.token);
+            localStorage.setItem("user_id", data.user_id);
               console.log(data);
-              fetch(`http://127.0.0.1:8000/user/list/${data.user_id}`)
+              fetch(`https://goldenweve-drf.onrender.com/user/list/${data.user_id}`)
               .then(res => res.json())
               .then(udata => {
                   console.log(udata);

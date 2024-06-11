@@ -22,7 +22,7 @@ const handldeposit = (event) => {
         console.log(info)
     
         if (dep > 0) {
-            fetch("http://127.0.0.1:8000/deposit/", {
+            fetch("https://goldenweve-drf.onrender.com/deposit/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
