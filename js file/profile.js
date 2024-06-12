@@ -161,3 +161,52 @@ const showplans = () => {
 };
 
 showplans();
+
+
+const showproduct = () => {
+    const user_id = localStorage.getItem("user_id");
+    console.log(user_id);
+
+    fetch(`https://goldenweve-drf.onrender.com/product/buy/?user_id=${user_id}`)
+        .then((res) => res.json())
+        .then((datax) => {
+        datax?.forEach((dataa) => {
+            console.log(dataa)
+    fetch(`https://goldenweve-drf.onrender.com/product/product/${dataa.product}`)
+    .then((res) => res.json())
+    .then((item) => {
+        console.log(item)
+
+            const parent = document.getElementById("productinformation");
+            const div = document.createElement("div");
+            div.classList.add('w-72', 'bg-white', 'shadow-md', 'rounded-xl', 'duration-500', 'hover:scale-105', 'hover:shadow-xl')
+            div.innerHTML=`
+                    <a ">
+            <img src="${item.image}"
+                    alt="Product" class="h-80 w-72 object-cover rounded-t-xl" />
+            <div class="px-4 py-3 w-72">
+                <span class="text-gray-400 mr-3 uppercase text-xs">${item.brand}</span>
+                <p class="text-lg font-bold text-black truncate block capitalize">${item.name}</p>
+                <div class="flex items-center">
+                    <p class="text-lg font-semibold text-black cursor-auto my-3">$${item.price}</p>
+                    <del>
+                        <p class="text-sm text-gray-600 cursor-auto ml-2">$50</p>
+                    </del>
+                    
+                </div>
+            </div>
+        </a>
+            `;
+            parent.appendChild(div);
+        })
+
+    })
+
+
+
+
+        })
+
+
+}
+showproduct();

@@ -21,7 +21,7 @@ const handleLogin = (event) => {
               .then(udata => {
                   console.log(udata);
                   if (udata.is_superuser) {
-                      localStorage.setItem("usex", udata.id);
+                      localStorage.setItem("admin", udata.id);
                       Swal.fire({
                           title: "Superuser Login",
                           text: "You have logged in as a superuser!",
@@ -33,7 +33,7 @@ const handleLogin = (event) => {
                       });
                   }
                   else if(udata.is_staff) {
-                    localStorage.setItem("usex", udata.id);
+                    localStorage.setItem("admin", udata.id);
                     Swal.fire({
                         title: "staff Login",
                         text: "You have logged in as a staff!",
@@ -47,7 +47,7 @@ const handleLogin = (event) => {
                   else {
                       Swal.fire({
                           title: "Login Successful!",
-                          text: "Welcome to ISBN BD!",
+                          text: "Welcome to GoldenWave!",
                           icon: "success",
                       }).then((result) => {
                           if (result.isConfirmed) {

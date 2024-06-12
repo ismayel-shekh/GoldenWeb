@@ -35,8 +35,11 @@ const showPlans = () => {
                         <span class="text-gray-600">/month</span>
                     </div>
                     <p class="font-light text-gray-600 sm:text-sm">Best option for personal training & for your Health</p>
-                    <button class="cursor-pointer bg-gray-900 w-full rounded-md p-3 text-center text-sm font-semibold text-white shadow-sm hover:-translate-y-1" onclick="bookplans(${datax.id})" >Get started</button>
-                    <!-- List -->
+                    ${localStorage.user_id 
+                    ? `<button class="cursor-pointer bg-gray-900 w-full rounded-md p-3 text-center text-sm font-semibold text-white shadow-sm hover:-translate-y-1" onclick="bookplans(${datax.id})">Get started</button>` 
+                    : `<button class="cursor-pointer bg-gray-900 w-full rounded-md p-3 text-center text-sm font-semibold text-white shadow-sm hover:-translate-y-1" onclick="window.location.href='login.html'">Get started</button>`
+                    }
+
                     <ul role="list" class="mb-8 space-y-4 text-left text-gray-600 text-sm">
                         ${featuresHTML}
                     </ul>

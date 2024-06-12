@@ -18,6 +18,10 @@ const handlelogOut = () => {
           // Perform logout actions
           localStorage.removeItem("token");
           localStorage.removeItem("user_id");
+          x = localStorage.getItem("admin")
+          if(x){
+            localStorage.removeItem("admin");
+          }
           window.location.href = "index.html"; // Redirect to login.html
         });
       }

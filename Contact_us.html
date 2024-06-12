@@ -33,21 +33,57 @@
                         <!-- <span class="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
                         <span class="block text-sm text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span> -->
                     </div>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                            // Check if user is logged in (you can use your own logic here)
+                            const isLoggedIn = localStorage.getItem('user_id') !== null;
+
+                            // Get profile and logout links
+                            const profileLink = document.getElementById("profile-link");
+                            const logoutLink = document.getElementById("logout-link");
+                            const depositLink = document.getElementById("deposit-link");
+
+                            // Get login link
+                            const loginLink = document.getElementById("login-link");
+                            const registerLink = document.getElementById("register-link");
+
+                            // Show profile and logout links if user is logged in
+                            if (isLoggedIn) {
+                                profileLink.style.display = "block";
+                                logoutLink.style.display = "block";
+                                depositLink.style.display = "block";
+                                loginLink.style.display = "none"; // Hide login link
+                                registerLink.style.display = "none"; // Hide login link
+                            } else {
+                                profileLink.style.display = "none";
+                                logoutLink.style.display = "none";
+                                depositLink.style.display = "none";
+                                loginLink.style.display = "block"; // Show login link
+                            }
+                        });
+                    </script>
                     <ul class="py-2" aria-labelledby="user-menu-button">
                         <li>
-                            <a href="profile.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
+                            <a href="profile.html"
+                               id="profile-link" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
                         </li>
                         <li>
-                            <a href="deposit.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Add Money</a>
+                            <a href="deposit.html" id="deposit-link"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Add
+                                Money</a>
                         </li>
                         <li>
-                            <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign in</a>
+                            <a href="login.html" id="login-link"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Login</a>
                         </li>
                         <li>
-                            <a href="register.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign up</a>
+                            <a href="register.html" id="register-link"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Register</a>
                         </li>
                         <li>
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white" onclick="handlelogOut()">Sign out</a>
+                            <a href="#" id="logout-link"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                                onclick="handlelogOut()">Logout</a>
                         </li>
                     </ul>
                 </div>
