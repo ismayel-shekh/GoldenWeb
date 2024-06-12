@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about_us</title>
+    <title>Shop</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
@@ -101,13 +101,13 @@
                     </li>
 
                     <li>
-                        <a href="shop.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Shop</a>
+                        <a href="shop.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Shop </a>
                     </li>
                     <li>
                         <a href="pricing.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Plans</a>
                     </li>
                     <li>
-                        <a href="about_us.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">About Us</a>
+                        <a href="about_us.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About Us</a>
                     </li>
                     <li>
                         <a href="Contact_us.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
@@ -129,8 +129,7 @@
                         });
                     </script>
                     <li id="admin-link">
-                        <a href="add_product.html"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-black md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Add Product</a>
+                        <a href="add_product.html"  class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Add product</a>
                     </li>
                 </ul>
             </div>
@@ -156,41 +155,49 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-<!-- about us  -->
-<section class="pt-10 overflow-hidden bg-gray-50 dark:bg-gray-50 md:pt-0 sm:pt-16 2xl:pt-16">
-    <div class="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <div class="grid items-center grid-cols-1 md:grid-cols-2">
+<!-- all product -->
 
-            <div>
-                <h2 class="text-3xl font-bold leading-tight text-black dark:text-black sm:text-4xl lg:text-5xl">Hey 👋 I
-                    am
-                    <br class="block sm:hidden" />Ismayel Shekh
-                </h2>
-                <p class="max-w-lg mt-3 text-xl leading-relaxed text-gray-600 dark:text-black md:mt-8">
-                    Amet minim mollit non deserunt
-                    ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
-                    Exercitation veniam consequat sunt nostrud amet.
-                </p>
+<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+	<div class="relative py-3 sm:max-w-xl sm:mx-auto">
+		<div
+			class="absolute inset-0 bg-gradient-to-r from-blue-300 to-blue-600 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+		</div>
+		<div class="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">
+			<div class="max-w-md mx-auto">
+				<div>
+					<h1 class="text-2xl font-semibold">Add A Product</h1>
+				</div>
+				<div class="divide-y divide-gray-200">
+					<div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                        <div class="relative">
+                            <input autocomplete="off" id="image" name="image" type="file" accept="image/*" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:border-rose-600" placeholder="Upload Image" />
+                            <label for="image" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Upload Image</label>
+                        </div>
+                        
+                        <div class="relative">
+							<input autocomplete="off" id="brand" name="brand" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="brand Name" />
+							<label for="brand" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Brand Name</label>
+						</div>
+                        <div class="relative">
+							<input autocomplete="off" id="product" name="product" type="text" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder=" product Name" />
+							<label for="product" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Product Name</label>
+						</div>
+                        <div class="relative">
+							<input autocomplete="off" id="price" name="price" type="number" class="peer placeholder-transparent h-10 w-full border-b-2 border-gray-300 text-gray-900 focus:outline-none focus:borer-rose-600" placeholder="price " />
+							<label for="price" class="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Price</label>
+						</div>
 
-                <p class="mt-4 text-xl text-gray-600 dark:text-gray-600 md:mt-8">
-                    <span class="relative inline-block">
-                        <span class="absolute inline-block w-full bottom-0.5 h-2 bg-yellow-300 dark:bg-yellow-300"></span>
-                    <span class="relative"> Have a question? </span>
-                    </span>
-                    <br class="block sm:hidden" />Ask me on <a href="https://x.com/?lang=en" title=""
-                        class="transition-all duration-200 text-sky-500 dark:text-sky-400 hover:text-sky-600 dark:hover:text-sky-500 hover:underline">Twitter</a>
-                </p>
-            </div>
+						<div class="relative">
+							<button class="bg-blue-500 text-white rounded-md px-2 py-1" onclick="addproduct(event)">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-            <div class="relative">
-                <img class="absolute inset-x-0 bottom-0 -mb-48 -translate-x-1/2 left-1/2" src="https://cdn.rareblocks.xyz/collection/celebration/images/team/1/blob-shape.svg" alt="" />
 
-                <img class="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110" src="img/ismayel1.png" alt="picture" />
-            </div>
-
-        </div>
-    </div>
-</section>
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
@@ -235,6 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="./js file/logout.js"></script>
+<script src="./js file/add_product.js"></script>
 
 </body>
 </html>
