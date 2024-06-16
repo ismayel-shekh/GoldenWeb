@@ -16,8 +16,8 @@ const loadUserDetails = () => {
                     <!-- Profile Image -->
                     <div class="mx-auto flex justify-center w-[141px] h-[141px] bg-blue-300/20 rounded-full bg-[url('${data.image}')] bg-cover bg-center bg-no-repeat">
                         <div class="bg-white/90 rounded-full w-6 h-6 text-center ml-28 mt-4">
-                            <input type="file" name="profile" id="upload_profile" hidden required>
-                            <label for="upload_profile">
+                            <input type="file" name="profile" id="" hidden required>
+                            <label for="">
                                 <svg data-slot="icon" class="w-6 h-5 text-blue-700" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z"></path>
@@ -27,6 +27,12 @@ const loadUserDetails = () => {
                     </div>
                     <h2 class="text-center mt-1 font-semibold dark:text-gray-300">Upload Profile Image</h2>
                     <h2 class="text-center mt-1 font-semibold dark:text-gray-300">Balance: ${data.balance} $</h2>
+                                        <div class="flex lg:flex-row md:flex-col sm:flex-col xs:flex-col gap-2 justify-center w-full">
+                        <div class="w-full mb-4 mt-6">
+                            <label for="upload-image" class="mb-2 dark:text-gray-300">Upload Image</label>
+                            <input id="upload-image" type="file" class="mt-2 p-4 w-full border-2 rounded-lg dark:text-gray-200 dark:border-gray-600 dark:bg-gray-800" placeholder="image" value="${data.image}">
+                        </div>
+                        </div>
                     <div class="flex lg:flex-row md:flex-col sm:flex-col xs:flex-col gap-2 justify-center w-full">
                         <div class="w-full mb-4 mt-6">
                             <label for="first-name" class="mb-2 dark:text-gray-300">First Name</label>
@@ -75,26 +81,46 @@ const updataprofile = (event) => {
     const last_name = getValue("last-name");
     const email = getValue("email");
     const mobile_number = getValue("phone-number");
-    const profile_image = document.getElementById("upload_profile").files[0];
-
+    const profile_image = document.getElementById("upload-image").files[0];
+    console.log(user_id)
+    console.log(first_name)
+    console.log(last_name)
+    console.log(email)
+    console.log(mobile_number)
+    console.log(profile_image)
     const formData = new FormData();
     formData.append('first_name', first_name);
     formData.append('last_name', last_name);
     formData.append('email', email);
     formData.append('mobile_number', mobile_number);
+    // formData.append('image', profile_image);
 
     if (profile_image) {
         formData.append('image', profile_image);
     }
 
     fetch(`https://goldenweve-drf.onrender.com/user/list/${user_id}/`, {
-        method: 'PUT',
+        method: 'PATCH',
         body: formData,
     })
         .then((response) => response.json())
         .then((data) => {
             console.log('Success:', data);
-            alert('Profile updated successfully');
+            if (data) {
+
+                Swal.fire({
+                  title: "Success!",
+                  text: `Successfully update profile`,
+                  icon: "success",
+                })
+                .then((result) => {
+                  if (result.isConfirmed) {
+                    window.location.href = "profile.html";
+                  }
+            });
+              
+                
+            }
         })
         .catch((error) => {
             console.error('Error:', error);
